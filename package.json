@@ -1,0 +1,23 @@
+{
+  "name": "js-to-do-website",
+  "version": "1.0.0",
+  "description": "<h1>JS-To-Do-Website</h1>\r <p>Simple little JavaScript and HTML/CSS website letting you create, complete, remove and restore to-do items.</p>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexLandherr/JS-To-Do-Website.git"
+  },
+  "author": "Alex Landherr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexLandherr/JS-To-Do-Website/issues"
+  },
+  "homepage": "https://github.com/AlexLandherr/JS-To-Do-Website#readme",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.4.0",
+    "parcel": "^2.4.0"
+  }
+}
