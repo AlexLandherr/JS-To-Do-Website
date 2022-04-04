@@ -1,40 +1,51 @@
 import {handleToDoClick} from "./handleToDoClick"
+import {ToDo} from "./ToDoObjects"
 
-//Hard-coded todo items.
+//***Hard-coded todo items.***
+//Creating ToDo objects.
+let ToDo_0: ToDo = new ToDo("Perform warp core maintenance.", false);
+let ToDo_1: ToDo = new ToDo("Purge plasma intake manifold.", false);
+let ToDo_2: ToDo = new ToDo("Check EPS conduits.", false);
+let ToDo_3: ToDo = new ToDo("Take the con.", false);
+
+//Creating ToDo object array.
+let toDoArray: ToDo[] = [ToDo_0, ToDo_1, ToDo_2, ToDo_3];
+
+//Creating the HTML.
+let ToDoItm_0: HTMLLIElement = document.createElement("li");
+ToDoItm_0.setAttribute("id", "ToDoItm_0");
+ToDoItm_0.addEventListener("click", () => {
+    handleToDoClick("ToDoItm_0", toDoArray[0]);
+})
+ToDoItm_0.innerHTML = toDoArray[0].getToDoMsg;
+document.getElementById("to-do-list").appendChild(ToDoItm_0);
+
 let ToDoItm_1: HTMLLIElement = document.createElement("li");
 ToDoItm_1.setAttribute("id", "ToDoItm_1");
 ToDoItm_1.addEventListener("click", () => {
-    handleToDoClick("ToDoItm_1");
+    handleToDoClick("ToDoItm_1", toDoArray[1]);
 })
-ToDoItm_1.innerHTML = "Perform warp core maintenance.";
+ToDoItm_1.innerHTML = toDoArray[1].getToDoMsg;
 document.getElementById("to-do-list").appendChild(ToDoItm_1);
 
 let ToDoItm_2: HTMLLIElement = document.createElement("li");
 ToDoItm_2.setAttribute("id", "ToDoItm_2");
 ToDoItm_2.addEventListener("click", () => {
-    handleToDoClick("ToDoItm_2");
+    handleToDoClick("ToDoItm_2", toDoArray[2]);
 })
-ToDoItm_2.innerHTML = "Purge plasma intake manifold.";
+ToDoItm_2.innerHTML = toDoArray[2].getToDoMsg;
 document.getElementById("to-do-list").appendChild(ToDoItm_2);
 
-let ToDoItm_3: HTMLLIElement = document.createElement("li");
+let ToDoItm_3 = document.createElement("li");
 ToDoItm_3.setAttribute("id", "ToDoItm_3");
 ToDoItm_3.addEventListener("click", () => {
-    handleToDoClick("ToDoItm_3");
+    handleToDoClick("ToDoItm_3", toDoArray[3]);
 })
-ToDoItm_3.innerHTML = "Check EPS conduits.";
+ToDoItm_3.innerHTML = toDoArray[3].getToDoMsg;
 document.getElementById("to-do-list").appendChild(ToDoItm_3);
 
-let ToDoItm_4 = document.createElement("li");
-ToDoItm_4.setAttribute("id", "ToDoItm_4");
-ToDoItm_4.addEventListener("click", () => {
-    handleToDoClick("ToDoItm_4");
-})
-ToDoItm_4.innerHTML = "Take the con.";
-document.getElementById("to-do-list").appendChild(ToDoItm_4);
-
 //Set all hardcoded todo items to red as default.
+ToDoItm_0.style.backgroundColor = "red";
 ToDoItm_1.style.backgroundColor = "red";
 ToDoItm_2.style.backgroundColor = "red";
 ToDoItm_3.style.backgroundColor = "red";
-ToDoItm_4.style.backgroundColor = "red";
