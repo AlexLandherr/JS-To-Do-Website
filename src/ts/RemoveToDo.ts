@@ -1,3 +1,2 @@
-/* export function removeToDo(): void {
-
-} */
+export function removeToDo(): void {
+}
