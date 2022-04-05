@@ -19,7 +19,6 @@ export class ToDo {
         this.isCompleted = completion;
     }
 
-    
     public get getIsCompleted(): boolean {
         return this.isCompleted;
     }

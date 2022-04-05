@@ -1,5 +1,7 @@
 import {handleToDoClick} from "./handleToDoClick"
 import {ToDo} from "./ToDoObjects"
+import {handleNewTodo} from "./handleNewToDo"
+import {handleToDoListSort} from "./handleToDoListSort";
 
 //***Hard-coded todo items.***
 //Creating ToDo objects.
@@ -49,3 +51,11 @@ ToDoItm_0.style.backgroundColor = "red";
 ToDoItm_1.style.backgroundColor = "red";
 ToDoItm_2.style.backgroundColor = "red";
 ToDoItm_3.style.backgroundColor = "red";
+
+//***Adding a new todo item.***
+document.getElementById("add-to-do").addEventListener("click", () => {
+    handleNewTodo(toDoArray);
+});
+
+//Adding event listener for sorting the todo list.
+document.getElementById("sort-btn").addEventListener("click", handleToDoListSort);
