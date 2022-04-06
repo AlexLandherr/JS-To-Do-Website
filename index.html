@@ -10,16 +10,21 @@
     <title>JS-To-Do Website</title>
 </head>
     <body class="container">
-        <div class="to-do-container">
-            <ul id="to-do-list"></ul>
-            <button type="button" id="sort-btn">Sort the list</button>
-        </div>
-        <div class="form-container">
-            <form id="to-do-form">
-                <label for="to-do-msg">To Do Message:</label><br>
-                <input type="text" id="to-do-msg" name="to-do-msg">
-                <button type="button" id="add-to-do">Add To Do Item</button>
-            </form>
+        <header class="site-logo">
+            <div class="logo">JS-To-Do Website</div>
+        </header>
+        <div class="main-section">
+            <div class="to-do-container">
+                <ul class="to-do-list" id="to-do-list"></ul>
+                <button class="sort-btn" type="button" id="sort-btn">Sort the list</button>
+            </div>
+            <div class="form-container">
+                <form class="to-do-form" id="to-do-form">
+                    <label class="to-do-label" for="to-do-msg">To Do Message:</label>
+                    <input class="to-do-input" type="text" id="to-do-msg" name="to-do-msg" size="40"><br>
+                    <button class="add-to-do" type="button" id="add-to-do">Add To Do Item</button>
+                </form>
+            </div>
         </div>
     </body>
 </html>
